@@ -1,0 +1,37 @@
+.bottom-part {
+  margin-bottom: 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bottom-part__left {
+  width: 280px;
+  margin-left: 140px;
+}
+
+.bottom-part__right{
+  margin-left: 156px;
+  width: 711px;
+}
+
+@media (max-width: 1439px) {
+  
+  .bottom-part__left {
+    margin-left: 9.7%;
+  }
+ 
+  .bottom-part__right {
+    margin-left: 10.8%;
+    width: 49.4%;
+  }
+  .feedback-text {
+    width: 91.8%;
+  }
+  
+}
+@media (max-width: 932px) {
+  
+  .bottom-part__left {
+    margin-bottom: 50px;
+  }
+  
+}

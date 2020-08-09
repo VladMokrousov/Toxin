@@ -1,0 +1,88 @@
+.fonts {
+  //width: 31.73%;
+  width: 403px;
+  //margin-left: 29.65%;
+  margin-left: 427px;
+
+}
+.fonts__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.fonts__item {
+  display: flex;
+  margin-bottom: 50px;
+
+}
+.fonts__item:first-of-type .fonts__tagname,
+.fonts__item:first-of-type .fonts__text {
+  font-size: 24px;
+  line-height: 29px;
+}
+.fonts__item:nth-of-type(2) .fonts__tagname,
+.fonts__item:nth-of-type(2) .fonts__text {
+  line-height: 23px;
+}
+.fonts__item:nth-of-type(3) .fonts__tagname,
+.fonts__item:nth-of-type(3) .fonts__text {
+  font-size: 12px;
+  line-height: 15px;
+}
+.fonts__item:last-of-type .fonts__tagname,
+.fonts__item:last-of-type .fonts__text {
+  font-size: 14px;
+  line-height: 24px;
+}
+.fonts__tagname {
+  
+  min-width: 37px;
+  //width: 9.18%;
+  margin-right: 30px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.25);
+
+}
+
+
+.fonts__text {
+  margin: 0;
+  width: 336px;
+  min-width: 174px;
+  //width: 83.37%;
+  font-weight: 700;
+}
+.fonts__text--other-font{
+  font-family: "Open Sans", Arial, sans-serif;
+}
+.fonts__item:nth-of-type(3) .fonts__text {
+  text-transform: uppercase;
+}
+.fonts__item:last-of-type .fonts__text {
+  font-weight: 400;
+}
+
+
+@media (min-width: $desktop-width) and (max-width: 1439px) {
+  .fonts {
+    width: 27.99%;
+    margin-left: 29.65%;
+    
+  }
+  
+}
+@media (min-width: $tablet-width) and (max-width: 1149px) {
+  .fonts {
+    width: 27.99%;
+    margin-left: 15.65%;
+  }
+  
+}
+
+@media (max-width: $tablet-width) {
+  .fonts {
+    width: 80%;
+    margin-left: 10.42%;
+  }
+  
+}

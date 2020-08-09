@@ -1,0 +1,342 @@
+
+extends ../layout/templateForUi
+
+block variables
+  - var title = "FormElements";
+
+block head
+
+
+block main
+  main.page-main.page-main--formElements
+    h1.visually-hidden Элементы форм для сайта
+    .up-part
+      .up-part__left
+        .content-wrapper--20
+          label.label.label--with-status.up-part__label(for='text-field-default') Text field 
+          input#text-field-default.input.input--long(type='text', name='email', placeholder='Email')
+        .content-wrapper--20
+          label.label.label--with-status.up-part__label.up-part__label--hover-focus-status(for='text-field-hover-focus') Text field 
+          input#text-field-hover-focus.input.input--long.input--bright-placeholder.input--hover-focus(type='text', name='hover', placeholder='This is pretty awesome')
+        .content-wrapper--20
+          label.label.label--with-status.label--with-dropdown.up-part__label(for='dropdown-default') Dropdown
+          input#dropdown-default.input.input--long.input--bright-placeholder(type='text', name='dropdown-default', placeholder='Сколько гостей')
+        .content-wrapper--40
+          label.label.label--with-status.up-part__label(for='masked-text-field') Masked text field
+          input#masked-text-field.input.input--long(type='text', name='masked-text-field', placeholder='ДД.ММ.ГГ')
+        .content-wrapper--40.content-wrapper--flex.up-part__content-wrapper--date-dropdown
+          .up-part__date-dropdown-wrapper.up-part__date-dropdown-wrapper--left
+            label.label.label--with-dropdown.up-part__label(for='date-dropdown') date dropdown
+            input#date-dropdown.input.input--short.input--bright-placeholder(type='text', name='date-dropdown', placeholder='ДД.ММ.ГГГГ')
+          .up-part__date-dropdown-wrapper.up-part__date-dropdown-wrapper--right
+            label.label.label--with-dropdown.up-part__label(for='date-dropdown-sec') date dropdown
+            input#date-dropdown-sec.input.input--short.input--bright-placeholder(type='text', name='date-dropdown-sec', placeholder='19.08.19')
+        .content-wrapper--40
+          label.label.label--with-dropdown.up-part__label.up-part__label--filter-date-dropdown(for='filter-date-dropdown') Filter date dropdown
+          input#filter-date-dropdown.input.input--medium.input--bright-placeholder(type='text', name='filter-date-dropdown', placeholder='19 авг - 23 авг') 
+        .content-wrapper--arrow-content
+          label.label.up-part__label(for='subscription-text-field') Subscription text field
+          input#subscription-text-field.input.input--medium(type='text', name='subscription-text-field', placeholder='Email')   
+          a.link--send.up-part__link--send(href="#")
+            span.arrow--right.up-part__arrow--right
+      .up-part__center
+        .content-wrapper--40
+          span.label.up-part__label--more-margin checkbox buttons
+          ul.checkbox-list.up-part__checkbox-list
+            li.checkbox-list__item.up-part__checkbox-item
+              input.visually-hidden.checkbox-list__checkbox.up-part__checkbox(type='checkbox' name='can-smoke' id='can-smoke')
+              label.checkbox-list__label.up-part__checkbox-label(for='can-smoke') Можно курить
+            li.checkbox-list__item.up-part__checkbox-item
+              input.visually-hidden.checkbox-list__checkbox.up-part__checkbox(type='checkbox' name='pets-free' id='pets-free' checked)
+              label.checkbox-list__label.up-part__checkbox-label(for='pets-free') Можно с питомцами
+            li.checkbox-list__item.up-part__checkbox-item
+              input.visually-hidden.checkbox-list__checkbox.up-part__checkbox(type='checkbox' name='guests-free' id='guests-free' checked)
+              label.checkbox-list__label.up-part__checkbox-label(for='guests-free')
+                | Можно пригласить гостей
+                br
+                | (до 10 человек)
+        .up-part__content-wrapper--radio-buttons
+          span.label.up-part__label--more-margin radio buttons
+          ul.radio-list
+            li.radio-list__item
+              input.visually-hidden.radio-list__radio(type='radio' name='sex' value='Мужчина' id='man-sex' checked)
+              label.radio-list__label(for='man-sex') Мужчина
+            li.radio-list__item
+              input.visually-hidden.radio-list__radio(type='radio' name='sex' value='Женщина' id='woman-sex')
+              label.radio-list__label(for='woman-sex') Женщина
+        .content-wrapper--40
+          span.label.up-part__label--more-margin toggle
+          ul.up-part__toggle-list
+            li.toggle-item
+              label.toggle-item__label(for='agree') Получать спецпредложения
+                input.visually-hidden.toggle-item__toggle(type='checkbox' name='agree' id='agree' checked)
+                span.toggle-item__slider
+            li.toggle-item
+              label.toggle-item__label(for='disagree') Получать спецпредложения
+                input.visually-hidden.toggle-item__toggle(type='checkbox' name='disagree' id='disagree')
+                span.toggle-item__slider
+        .content-wrapper--40
+          span.label.up-part__label--more-margin like button
+          .content-wrapper--flex
+            button.like-button.like-button--first 2
+            button.like-button.like-button--clicked 12
+          
+        .up-part__content-wrapper
+          span.label.up-part__label--more-margin rate button
+          .content-wrapper--flex
+            .rate-buttons.rate-buttons--first
+              form(action="")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--5(type="radio" id="star-5" name="star")
+                label.rate-buttons__rate.rate-buttons__rate--5(for="star-5")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--4(type="radio" id="star-4" name="star" checked)
+                label.rate-buttons__rate.rate-buttons__rate--4(for="star-4")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--3(type="radio" id="star-3" name="star")
+                label.rate-buttons__rate.rate-buttons__rate--3(for="star-3")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--2(type="radio" id="star-2" name="star")
+                label.rate-buttons__rate.rate-buttons__rate--2(for="star-2")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--1(type="radio" id="star-1" name="star")
+                label.rate-buttons__rate.rate-buttons__rate--1(for="star-1")
+            .rate-buttons
+              form(action="")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--5(type="radio" id="another-star-5" name="another-star" checked)
+                label.rate-buttons__rate.rate-buttons__rate--5(for="another-star-5")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--4(type="radio" id="another-star-4" name="another-star")
+                label.rate-buttons__rate.rate-buttons__rate--4(for="another-star-4")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--3(type="radio" id="another-star-3" name="another-star")
+                label.rate-buttons__rate.rate-buttons__rate--3(for="another-star-3")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--2(type="radio" id="another-star-2" name="another-star")
+                label.rate-buttons__rate.rate-buttons__rate--2(for="another-star-2")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--1(type="radio" id="another-star-1" name="another-star")
+                label.rate-buttons__rate.rate-buttons__rate--1(for="another-star-1")
+           
+      .up-part__right
+        .up-part__content-wrapper--range-slider
+          span.label.label--range-slider range-slider
+          .slider-with-range
+            input.slider-with-range__value(type="text" name="slider-value" placeholder="5 000₽ - 10 000₽" readonly)
+            .slider-with-range__line.slider-line
+              .slider-with-range__pin.slider-with-range__pin--min-value(tabindex="0") Кнопка изменения минимальной суммы    
+              .slider-with-range__pin.slider-with-range__pin--max-value(tabindex="0") Кнопка изменения максимальной суммы
+              .slider-with-range__range Диапазон сумм 
+        .content-wrapper--40
+          span.label.up-part__label--more-margin buttons
+          .up-part__buttons-wrapper
+              button.btn.btn--standart.up-part__button click me
+              button.btn.btn--with-opacity.up-part__button click me
+          .up-part__buttons-wrapper
+              button.btn.btn--invert.up-part__button click me
+              button.btn.btn--invert.btn--invert-opacity.up-part__button click me
+          .up-part__buttons-wrapper
+              button.btn--string.up-part__btn--string click me
+              button.btn--string.btn--string-opacity click me
+          .content-wrapper--arrow-content
+            a.arrow--right.arrow--for-purchase(href="#")
+            a.btn.btn--with-arrow(href="#") перейти к оплате
+          
+           
+        .up-part__content-wrapper
+          span.label.up-part__label--more-margin pagination
+          .pagination
+            ul.pagination__list
+              li.pagination__item
+                a.pagination__link.pagination__link--active(href='#') 1
+              li.pagination__item      
+                a.pagination__link(href='#') 2
+              li.pagination__item           
+                a.pagination__link(href='#') 3
+              li.pagination__item         
+                a.pagination__link(href='#') ...
+              li.pagination__item         
+                a.pagination__link(href='#') 15
+              li.pagination__item.pagination__item--next
+                a.arrow--right.arrow--for-purchase.pagination__arrow(href='#')         
+                a.pagination__link--with-arrow(href='#')
+            span.pagination__description 1 – 12 из 100+ вариантов аренды   
+    .middle-part    
+      .middle-part__left
+        .content-wrapper--20
+          label.label.label--with-status.label--with-expanded(for='dropdown-default-second') Dropdown
+          input#dropdown-default-second.input.input--medium.input--bright-placeholder.input--expanded.input--expanded-close(type='text', name='dropdown-default', placeholder='2 спальни, 2 кровати...' readonly)
+        .content-wrapper--with-shadow
+          label.label.label--with-status.label--with-status-expanded.label--with-expanded(for='dropdown-expanded') Dropdown
+          input#dropdown-expanded.input.input--medium.input--bright-placeholder.input--hover-focus.input--expanded.input--expanded--open(type='text', name='dropdown-expanded', placeholder='2 спальни, 2 кровати...' readonly)
+          .expanded-part
+            ul.expanded-part__name-list
+              li.expanded-part__name-item спальни
+              li.expanded-part__name-item кровати
+              li.expanded-part__name-item ванные комнаты
+            ul.expanded-part__number-list
+              li.expanded-part__number-item
+                button.expanded-part__control-btn.expanded-part__control-btn--decrease
+                span.expanded-part__number-text 2
+                button.expanded-part__control-btn.expanded-part__control-btn--increase
+              li.expanded-part__number-item
+                button.expanded-part__control-btn.expanded-part__control-btn--decrease
+                span.expanded-part__number-text 2
+                button.expanded-part__control-btn.expanded-part__control-btn--increase
+              li.expanded-part__number-item 
+                button.expanded-part__control-btn.expanded-part__control-btn--decrease.expanded-part__control-btn--disabled
+                span.expanded-part__number-text 0
+                button.expanded-part__control-btn.expanded-part__control-btn--increase
+        
+        .middle-part__content-wrapper
+          span.label.label--expandable-checkbox-list.label--expandable-checkbox-list-close.middle-part__label--more-margin expandable checkbox list
+          ul.checkbox-list.checkbox-list--expandable.checkbox-list--close
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='breakfast-f' id='breakfast-f')
+              label.checkbox-list__label(for='breakfast-f') Завтрак
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='desk-f' id='desk-f' checked)
+              label.checkbox-list__label(for='desk-f') Письменный стол
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='feeding-chair-f' id='feeding-chair-f' checked)
+              label.checkbox-list__label(for='feeding-chair-f') Стул для кормления
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='cot-f' id='cot-f' checked)
+              label.checkbox-list__label(for='cot-f') Кроватка
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='tv-f' id='tv-f')
+              label.checkbox-list__label(for='tv-f') Телевизор
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='shampoo-f' id='shampoo-f')
+              label.checkbox-list__label(for='shampoo-f') Шампунь
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='tv-second-f' id='tv-second-f')
+              label.checkbox-list__label(for='tv-second-f') Телевизор
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='shampoo-second-f' id='shampoo-second-f')
+              label.checkbox-list__label(for='shampoo-second-f') Шампунь
+        .middle-part__content-wrapper
+          span.label.label--expandable-checkbox-list.label--expandable-checkbox-list-open.middle-part__label--more-margin expandable checkbox list
+          ul.checkbox-list.checkbox-list--expandable.checkbox-list--open
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='breakfast' id='breakfast')
+              label.checkbox-list__label(for='breakfast') Завтрак
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='desk' id='desk' checked)
+              label.checkbox-list__label(for='desk') Письменный стол
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='feeding-chair' id='feeding-chair' checked)
+              label.checkbox-list__label(for='feeding-chair') Стул для кормления
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='cot' id='cot' checked)
+              label.checkbox-list__label(for='cot') Кроватка
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='tv' id='tv')
+              label.checkbox-list__label(for='tv') Телевизор
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='shampoo' id='shampoo')
+              label.checkbox-list__label(for='shampoo') Шампунь
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='tv-second' id='tv-second')
+              label.checkbox-list__label(for='tv-second') Телевизор
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='shampoo-second' id='shampoo-second')
+              label.checkbox-list__label(for='shampoo-second') Шампунь
+           
+      
+      .middle-part__center
+        .content-wrapper--with-shadow
+          label.label.label--with-expanded(for='dropdown-expanded-guests') Dropdown
+          input#dropdown-expanded-guests.input.input--long.input--bright-placeholder.input--hover-focus.input--expanded.input--expanded--open(type='text', name='dropdown-expanded-guests', placeholder='Сколько гостей' readonly)
+          .expanded-part.expanded-part--long
+            .content-wrapper--flex
+              ul.expanded-part__name-list
+                li.expanded-part__name-item взрослые
+                li.expanded-part__name-item дети
+                li.expanded-part__name-item младенцы
+              ul.expanded-part__number-list
+                li.expanded-part__number-item
+                  button.expanded-part__control-btn.expanded-part__control-btn--decrease.expanded-part__control-btn--disabled
+                  span.expanded-part__number-text 0
+                  button.expanded-part__control-btn.expanded-part__control-btn--increase
+                li.expanded-part__number-item
+                  button.expanded-part__control-btn.expanded-part__control-btn--decrease.expanded-part__control-btn--disabled
+                  span.expanded-part__number-text 0
+                  button.expanded-part__control-btn.expanded-part__control-btn--increase
+                li.expanded-part__number-item 
+                  button.expanded-part__control-btn.expanded-part__control-btn--decrease.expanded-part__control-btn--disabled
+                  span.expanded-part__number-text 0
+                  button.expanded-part__control-btn.expanded-part__control-btn--increase
+            button.btn--string.expanded-part__apply-btn применить
+        .middle-part__wrapper--rich-checkbox
+          span.label.middle-part__label--more-margin rich checkbox buttons
+          ul.checkbox-list
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='wide-corridor' id='wide-corridor')
+              label.checkbox-list__label.checkbox-list__label--rich(for='wide-corridor') Широкий коридор 
+              span.checkbox-list__description
+                | Ширина коридора в номере
+                br
+                | не менее 91 см.
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='helper-for-invalid' id='helper-for-invalid')
+              label.checkbox-list__label.checkbox-list__label--rich(for='helper-for-invalid') Помощник для инвалидов
+              span.checkbox-list__description
+                | На 1 этаже вас встретит специалист
+                br
+                | и проводит до номера.
+      .middle-part__right   
+        .content-wrapper--with-shadow
+          label.label.label--with-expanded(for='dropdown-expanded-guests-plus') Dropdown
+          input#dropdown-expanded-guests-plus.input.input--long.input--bright-placeholder.input--hover-focus.input--expanded.input--expanded--open(type='text', name='dropdown-expanded-guests-plus', placeholder='3 гостя' readonly)
+          .expanded-part.expanded-part--long
+            .content-wrapper--flex
+              ul.expanded-part__name-list
+                li.expanded-part__name-item взрослые
+                li.expanded-part__name-item дети
+                li.expanded-part__name-item младенцы
+              ul.expanded-part__number-list
+                li.expanded-part__number-item
+                  button.expanded-part__control-btn.expanded-part__control-btn--decrease
+                  span.expanded-part__number-text 2
+                  button.expanded-part__control-btn.expanded-part__control-btn--increase
+                li.expanded-part__number-item
+                  button.expanded-part__control-btn.expanded-part__control-btn--decrease
+                  span.expanded-part__number-text 1
+                  button.expanded-part__control-btn.expanded-part__control-btn--increase
+                li.expanded-part__number-item 
+                  button.expanded-part__control-btn.expanded-part__control-btn--disabled.expanded-part__control-btn--decrease
+                  span.expanded-part__number-text 0
+                  button.expanded-part__control-btn.expanded-part__control-btn--increase
+            .content-wrapper--flex-with-justify
+              button.btn--string.btn--string-opacity.expanded-part__clean-btn очистить
+              button.btn--string.expanded-part__apply-btn.expanded-part__apply-btn--another-margin применить     
+        .middle-part__wrapper--bullet-list
+          span.label.middle-part__label--more-margin bullet list
+          ul.bullet-list
+            li.bullet-list__item
+              span.bullet-list__text Нельзя с питомцами
+            li.bullet-list__item
+              span.bullet-list__text Без вечеринок и мероприятий
+            li.bullet-list__item
+              span.bullet-list__text 
+                | Время прибытия — после 13:00,
+                br
+                | а выезд до 12:00
+    .bottom-part
+      .bottom-part__left
+          ul.features-list
+            li.features-list__item.features-list__item--smile
+              span.features-list__text Комфорт
+              span.features-list__text.features-list__description Шумопоглащающие стены
+            li.features-list__item.features-list__item--building
+              span.features-list__text Удобство
+              span.features-list__text.features-list__description Окно в каждой из спален
+      .bottom-part__right
+        .feedback
+          .feedback__up
+            img(src="assets/img/avatar.png" width="48" height="48" alt="Аватар комментатора")
+            .wrapper
+              span.feedback__commentator Мурад Сарафанов
+              span.feedback__date 5 дней назад
+          .feedback__down
+            button.like-button.like-button--clicked.feedback__like-button 12
+            p.feedback__text
+              | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. 
+              br
+              | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.   
+block script
+  script(src='assets/js/main.js')
+
+

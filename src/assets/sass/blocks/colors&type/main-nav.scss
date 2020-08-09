@@ -1,0 +1,79 @@
+.main-nav--for-ui {
+  min-height: 78px;
+}
+.main-nav--for-ui__logo-image {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+/*.main-nav__logo {
+  display: block;
+  width: 106px;
+  margin: 15px 0;
+}*/
+.main-nav__logo-image {
+padding: 15px 0;
+}
+.main-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 26px;
+}
+.main-nav__item {
+  margin-right: 20px;
+}
+.main-nav__link {
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.main-nav__link--strong{
+  font-weight: 700;
+  color: rgba(31, 32, 65, 0.75);
+}
+.main-nav__link--dropdown {
+  padding-right: 24px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 7px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid rgba(31, 32, 65, 0.5);
+    border-right: 2px solid rgba(31, 32, 65, 0.5);
+    transform: rotate(135deg);
+  }
+}
+.main-nav__bnt-wrapper {
+  margin-top: 18px;
+}
+.main-nav__btn {
+  padding: 7.5px 0;
+
+}
+.main-nav__btn--entry {
+  width: 87px;
+  margin-right: 20px;
+ 
+}
+.main-nav__btn--registr {
+  width: 196px;
+
+}
+.main-nav__link--profile {
+  position: relative;
+  margin-top: 29px;
+  margin-left: 20px;
+  &::before{
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: -20px;
+    width: 1px;
+    height: 30px;
+    background-color: rgba(31, 32, 65, 0.1);
+  }
+
+}

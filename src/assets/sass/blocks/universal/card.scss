@@ -1,0 +1,209 @@
+.card{
+  width: 380px;
+  padding: 40px 30px 30px 30px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.card__text--another-action {
+  margin: auto 0;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+.card__title--number{
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+}
+.card__title--number-strong {
+  font-size: 24px;
+  line-height: 30px;
+}
+.card__title--room-type{
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.card__title--price-per-day-strong{
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  color: rgba(31, 32, 65, 0.5);
+}
+.card__title--price-per-day{
+  padding-top: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.card__title--room-type{
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  color: #BC9CFF;
+  text-transform: uppercase;
+}
+.card__text--with-limit{
+  width: 214px;
+}
+.card__text--with-info-icon{
+  position: relative;
+  &::before{
+    position: absolute;
+    top: 0;
+    right: -20px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  &::after{
+    position: absolute;
+    top: 4px;
+    right: -12px;
+    content: "i";
+    //width: 20px;
+    //height: 20px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    color: rgba(31, 32, 65, 0.25);
+  }
+}
+.card__result-price {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+}
+.card__result-price--with-line{
+  position: relative;
+  &::before{
+    position: absolute;
+    bottom: 5px;
+    left: 62px;
+    content: "";
+    width: 182px;
+    height: 1px;
+    border: 1px dashed rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+  }
+}
+.card--calendar{
+  width: 320px;
+  height: 369px;
+ 
+}
+.card__calendar-input {
+  display: none;
+}
+
+.card--room{
+  width: 270px;
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+}
+.card__wrapper--img {
+  position: relative;
+
+}
+.card__arrow-for-slider {
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(225deg);
+}
+.card__arrow-for-slider--next {
+  left: auto;
+  right: 20px;
+  transform: rotate(45deg);
+}
+.card__shadow-for-img {
+  border-radius: 4px 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 151px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+}
+
+.card__shadow-for-img--right {
+  left: auto;
+  right: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.card__img{
+  border-radius: 4px 4px 0 0;
+}
+
+.card__wrapper--slider-dots {
+  z-index: 1;
+  width: 42px;
+  position: absolute;
+  top: 125px;
+  right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.card__slider-dot {
+  width: 7.5px;
+  height: 7.5px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.card__slider-dot--active {
+  background-color: #fff;
+}
+.card__wrapper--number-description {
+  padding: 20px;
+}
+.card__description--number{
+  font-size: 19px;
+  line-height: 24px;
+}
+.card__description--price-per-day{
+  padding-top: 5px;
+}
+.card__wrapper--rate {
+  position: relative;
+  &::after{
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 0;
+    width: 230px;
+    height: 1px;
+    background-color: rgba(31, 32, 65, 0.1);
+
+  }
+}
+
+.card__description--reviews {
+  padding-top: 2px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.card__description--reviews-strong {
+  font-weight: 700;
+}
+.card__wrapper--img-no-arrow{
+  position: relative;
+}

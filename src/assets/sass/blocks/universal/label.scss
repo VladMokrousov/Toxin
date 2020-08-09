@@ -1,0 +1,90 @@
+.label{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.label--with-status{
+  position: relative;
+  
+  &::after {
+    content: "default";
+    position: absolute;
+    top: -3px;
+    right: 0;
+    font-weight: 400;
+    color: rgba(31, 32, 65, 0.5);
+  }
+  
+}
+.label--with-status-expanded::after {
+  content: "expanded";
+}
+.label--with-dropdown {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid rgba(31, 32, 65, 0.5);
+    border-right: 2px solid rgba(31, 32, 65, 0.5);
+    transform: rotate(135deg);
+  }
+}
+.label--with-expanded {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid rgba(31, 32, 65, 0.75);
+    border-right: 2px solid rgba(31, 32, 65, 0.75);
+    transform: rotate(135deg);
+  }
+ 
+}
+.label--expandable-checkbox-list {
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid rgba(31, 32, 65, 0.5);
+    border-right: 2px solid rgba(31, 32, 65, 0.5);
+    transform: rotate(135deg);
+  }
+}
+.label--range-slider{
+  margin-bottom: 20px;
+}
+.label--expandable-checkbox-list {
+  position: relative;
+  cursor: pointer;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid rgba(31,32,65,.5);
+    border-right: 2px solid rgba(31,32,65,.5);
+    transform: rotate(135deg);
+  }
+}
+.label--expandable-checkbox-list-open::before{
+  top: 5px;
+  transform: rotate(315deg);
+}

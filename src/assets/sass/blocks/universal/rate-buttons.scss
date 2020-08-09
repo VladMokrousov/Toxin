@@ -1,0 +1,23 @@
+.rate-buttons {
+  width: 125px;
+}
+.rate-buttons--first {
+  margin-right: 20px;
+}
+.rate-buttons__input:checked ~ .rate-buttons__rate {
+  background-image: url("/assets/img/star-active.svg");
+}
+.rate-buttons__rate {
+  cursor: pointer;
+  width: 20px;
+  height: 19px;
+  padding-right: 5px;
+  float: right;
+  background-image: url("/assets/img/star-disable.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  transition: all 0.2s;
+  &:hover{
+    transform: rotate(-15deg) scale(1.3);
+  }
+}

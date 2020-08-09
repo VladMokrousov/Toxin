@@ -1,0 +1,34 @@
+.arrow--right {
+  position: absolute;
+  top: 10px;
+  right: 3px;
+  width: 15px;
+  height: 2px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-color: #BC9CFF;
+ 
+  &::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #BC9CFF;
+    border-right: 2px solid #BC9CFF;
+    border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-image-slice: 1;
+    transform: rotate(45deg);
+  }
+}
+.arrow--for-purchase {
+  top: 20px;
+  right: 15px;
+  background: none;
+  background-color: #fff;
+  &::after {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-image: none;
+  }
+}
