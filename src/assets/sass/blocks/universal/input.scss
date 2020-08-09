@@ -1,0 +1,41 @@
+.input {
+  height: 44px;
+  box-sizing: border-box;
+  padding: 0;
+  padding-left: 15px;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px; 
+  &::placeholder {
+    color: rgba(31, 32, 65, 0.25);
+  }
+}
+
+.input:hover,
+.input:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  outline: none;
+}
+.input--long {
+  width: 320px;
+}
+.input--medium {
+  width: 266px;
+}
+.input--short {
+  width: 150px;
+}
+.input--bright-placeholder::placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+.input--hover-focus{
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.input--expanded {
+  border-radius: 4px 4px 0 0;
+  padding-right: 40px;
+  cursor: pointer;
+}

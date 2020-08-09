@@ -1,0 +1,188 @@
+extends ../layout/grayTemplateForUi
+
+block variables
+  - var title = "Cards";
+
+block head
+  link(rel="stylesheet" href="assets/css/forCalendar.css") 
+
+block main
+  main.page-main.page-main--cards
+    h1.visually-hidden Карточки для сайта
+    .left-side
+      section.card.card--find-room.content-wrapper--40
+        h2.visually-hidden Подбор номера
+        form(name='find-room')
+          span.h2-title.left-side__title Найдем номера под ваши пожелания
+          .content-wrapper--flex.content-wrapper--20.left-side__wrapper--flex
+            .left-side__wrapper--date-dropdown
+              label.label.label--with-dropdown(for='arrival') Прибытие
+              input#arrival.input.input--short.input--bright-placeholder(type='text', name='arrival', placeholder='ДД.ММ.ГГГГ')
+            .left-side__wrapper--date-dropdown
+              label.label.label--with-dropdown(for='exit') Выезд
+              input#exit.input.input--short.input--bright-placeholder(type='text', name='exit', placeholder='ДД.ММ.ГГГГ')
+          .left-side__wrapper--how-much-guests
+            label.label.label--with-dropdown(for='how-much-guests') Гости
+            input#how-much-guests.input.input--long.input--bright-placeholder(type='text', name='how-much-guests', placeholder='Сколько гостей')
+          .content-wrapper--arrow-content
+            a.arrow--right.arrow--for-purchase(href="#")
+            a.btn.btn--with-arrow(href="#") Подобрать номер
+      section.card.card--account-registration
+        h2.visually-hidden Регистрация
+        form(name="sign-up")
+          span.h2-title.left-side__title Регистрация аккаунта
+          .content-wrapper--20
+            input.input.input--long.left-side__input(type='text', name='name', placeholder='Имя')
+            input.input.input--long.left-side__input(type='text', name='surname', placeholder='Фамилия')
+            ul.radio-list
+              li.radio-list__item
+                input.visually-hidden.radio-list__radio(type='radio' name='sex--cards' value='Мужчина' id='man-sex--cards' checked)
+                label.radio-list__label(for='man-sex--cards') Мужчина
+              li.radio-list__item
+                input.visually-hidden.radio-list__radio(type='radio' name='sex--cards' value='Женщина' id='woman-sex--cards')
+                label.radio-list__label(for='woman-sex--cards') Женщина
+          .content-wrapper--20
+            label.label(for='birthday') Дата рождения
+            input#birthday.input.input--long(type='text', name='birthday', placeholder='ДД.ММ.ГГГГ')
+          .content-wrapper--20
+            span.label Данные для входа в сервис
+            input.input.input--long.left-side__input(type='text', name='email', placeholder='Email')
+            input.input.input--long.left-side__input(type='text', name='password', placeholder='Пароль')
+            .toggle-item
+              label.toggle-item__label(for='agree--cards') Получать спецпредложения
+                input.visually-hidden.toggle-item__toggle(type='checkbox' name='agree--cards' id='agree--cards')
+                span.toggle-item__slider
+          .content-wrapper--arrow-content.content-wrapper--30
+            a.arrow--right.arrow--for-purchase(href="#")
+            a.btn.btn--with-arrow(href="#") Перейти к оплате
+        .content-wrapper--flex-with-justify
+          span.card__text--another-action Уже есть аккаунт на Toxin  
+          button.btn.btn--invert Войти
+    .center
+      section.card.card--booking-room.content-wrapper--40
+        h2.visually-hidden Бронирование номера
+        form(name="to-book")
+          .title-wrapper.content-wrapper--flex-with-justify.content-wrapper--20
+            .just-wrapper
+              span.card__title--number № 
+                b.card__title--number.card__title--number-strong 888 
+              span.card__title--room-type Люкс
+            span.card__title--price-per-day
+              b.card__title--price-per-day-strong 9 990₽ 
+              | в сутки 
+          .content-wrapper--flex-with-justify.content-wrapper--20
+            .center__wrapper--date-dropdown
+              label.label.label--with-dropdown(for='arrival--booking') Прибытие
+              input#arrival--booking.input.input--short.input--bright-placeholder(type='text', name='arrival--booking', placeholder='19.08.2019')
+            .center__wrapper--date-dropdown
+              label.label.label--with-dropdown(for='exit--booking') Выезд
+              input#exit--booking.input.input--short.input--bright-placeholder(type='text', name='exit--booking', placeholder='23.08.2019')
+          .center__wrapper--how-much-guests.content-wrapper--20
+            label.label.label--with-dropdown(for='how-much-guests--center') Гости
+            input#how-much-guests--center.input.input--long.input--bright-placeholder(type='text', name='how-much-guests--center', placeholder='3 гостя')
+          .content-wrapper--flex-with-justify.content-wrapper--10
+            span.regular-text.card__text--with-limit 9 990₽ x 4 суток
+            span.regular-text 39 960₽
+          .content-wrapper--flex-with-justify.content-wrapper--10
+            span.regular-text.card__text--with-limit.card__text--with-info-icon Сбор за услуги: скидка 2179₽
+            span.regular-text 0₽
+          .content-wrapper--flex-with-justify.content-wrapper--30
+            span.regular-text.card__text--with-limit.card__text--with-info-icon Сбор за дополнительные услуги
+            span.regular-text 300₽
+          .content-wrapper--flex-with-justify.content-wrapper--20
+            span.card__result-price.card__result-price--with-line Итого
+            span.card__result-price 38 081₽
+          .content-wrapper--arrow-content
+            a.arrow--right.arrow--for-purchase(href="#")
+            a.btn.btn--with-arrow(href="#") Забронировать 
+      section.card.card--entry.content-wrapper--40
+        h2.visually-hidden Вход на сайт
+        form(name="sign-in")
+          span.h2-title.center__title Войти
+          .content-wrapper--20
+            input.input.input--long.left-side__input(type='text', name='email--entry', placeholder='Email')
+            input.input.input--long.left-side__input(type='text', name='password--entry', placeholder='Пароль')
+          .content-wrapper--arrow-content.content-wrapper--30
+            a.arrow--right.arrow--for-purchase(href="#")
+            a.btn.btn--with-arrow(href="#") Войти
+        .content-wrapper--flex-with-justify
+          span.card__text--another-action Нет аккаунта на Toxin?
+          button.btn.btn--invert Создать
+    .right-side
+      section.card--calendar.content-wrapper--40
+        h2.visually-hidden Выбор даты
+        input#invisible-input.card__calendar-input(type='text', name='invisible-input', placeholder='sometext')
+      section.card--room.card--room-with-arrow.content-wrapper--40
+        h2.visually-hidden Карточка номера
+        .card__wrapper--img
+          img.card__img(src="assets/img/room-1.png" width="270" height="151" alt="Карточка номера")
+          .card__shadow-for-img.card__shadow-for-img--left
+          .card__shadow-for-img.card__shadow-for-img--right
+          .card__arrow-for-slider.card__arrow-for-slider--prev
+          .card__arrow-for-slider.card__arrow-for-slider--next
+          .card__wrapper--slider-dots
+            span.card__slider-dot.card__slider-dot--active
+            span.card__slider-dot
+            span.card__slider-dot
+            span.card__slider-dot
+          
+        .card__wrapper--number-description
+          .content-wrapper--flex-with-justify.content-wrapper--20
+            .just-wrapper
+              span.card__title--number № 
+                b.card__description--number.card__title--number.card__title--number-strong 888 
+              span.card__title--room-type Люкс
+            span.card__description--price-per-day.card__title--price-per-day
+              b.card__title--price-per-day-strong 9 990₽ 
+              | в сутки 
+          .card__wrapper--rate.content-wrapper--flex-with-justify
+            .rate-buttons
+              form(action="")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--5(type="radio" id="star-5" name="star" checked)
+                label.rate-buttons__rate.rate-buttons__rate--5(for="star-5")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--4(type="radio" id="star-4" name="star")
+                label.rate-buttons__rate.rate-buttons__rate--4(for="star-4")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--3(type="radio" id="star-3" name="star")
+                label.rate-buttons__rate.rate-buttons__rate--3(for="star-3")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--2(type="radio" id="star-2" name="star")
+                label.rate-buttons__rate.rate-buttons__rate--2(for="star-2")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--1(type="radio" id="star-1" name="star")
+                label.rate-buttons__rate.rate-buttons__rate--1(for="star-1")
+            span.card__description--reviews
+              b.card__description--reviews-strong 145 
+              | Отзывов
+      section.card--room
+        h2.visually-hidden Карточка номера
+        .card__wrapper--img-no-arrow
+          img.card__img(src="assets/img/room-2.png" width="270" height="151" alt="Карточка номера")
+          .card__wrapper--slider-dots
+            span.card__slider-dot.card__slider-dot--active
+            span.card__slider-dot
+            span.card__slider-dot
+            span.card__slider-dot
+        .card__wrapper--number-description
+          .content-wrapper--flex-with-justify.content-wrapper--20
+            .just-wrapper
+              span.card__title--number № 
+                b.card__description--number.card__title--number.card__title--number-strong 840 
+            span.card__description--price-per-day.card__title--price-per-day
+              b.card__title--price-per-day-strong 9 900₽ 
+              | в сутки 
+          .card__wrapper--rate.content-wrapper--flex-with-justify
+            .card__rate-buttons
+                form(action="")
+                  input.visually-hidden.rate-buttons__input.rate-buttons__input--5(type="radio" id="another-star-5" name="another-star")
+                  label.rate-buttons__rate.rate-buttons__rate--5(for="another-star-5")
+                  input.visually-hidden.rate-buttons__input.rate-buttons__input--4(type="radio" id="another-star-4" name="another-star" checked)
+                  label.rate-buttons__rate.rate-buttons__rate--4(for="another-star-4")
+                  input.visually-hidden.rate-buttons__input.rate-buttons__input--3(type="radio" id="another-star-3" name="another-star")
+                  label.rate-buttons__rate.rate-buttons__rate--3(for="another-star-3")
+                  input.visually-hidden.rate-buttons__input.rate-buttons__input--2(type="radio" id="another-star-2" name="another-star")
+                  label.rate-buttons__rate.rate-buttons__rate--2(for="another-star-2")
+                  input.visually-hidden.rate-buttons__input.rate-buttons__input--1(type="radio" id="another-star-1" name="another-star")
+                  label.rate-buttons__rate.rate-buttons__rate--1(for="another-star-1")
+            span.card__description--reviews
+              b.card__description--reviews-strong 65 
+              | Отзывов
+block script
+  script(src='assets/js/forCalendar.js')

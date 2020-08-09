@@ -1,0 +1,1 @@
+console.log("Тебе привет из hiFile!)");

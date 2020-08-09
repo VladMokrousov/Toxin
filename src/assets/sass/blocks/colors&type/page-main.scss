@@ -1,0 +1,20 @@
+.page-main {
+  display: flex;
+  padding-top: 67px;
+}
+.page-main--formElements {
+  display: block;
+}
+.page-main--cards {
+  margin-bottom: 140px;
+}
+.page-main--headersFooters {
+  padding-top: 0;
+}
+
+@media (max-width: $tablet-width) {
+  .page-main {
+    display: block;
+  }
+
+}

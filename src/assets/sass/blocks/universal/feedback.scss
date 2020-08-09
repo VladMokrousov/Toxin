@@ -1,0 +1,38 @@
+.feedback__up{
+  margin-bottom: 10px;
+}
+.feedback__up{
+  display: flex;
+}
+.feedback__up img {
+  margin-right: 10px;
+  border-radius: 32px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+}
+.feedback__commentator {
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 800;
+  color: rgba(31, 32, 65, 0.75);
+}
+.feedback__date{
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.feedback__down{
+  display: flex;
+}
+.feedback__like-button {
+  margin-right: 18px;
+}
+.feedback__text{
+  width: 653px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}

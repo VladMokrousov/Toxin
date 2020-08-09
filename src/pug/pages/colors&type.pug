@@ -1,0 +1,48 @@
+
+extends ../layout/templateForUi
+
+block variables
+  - var title = "Colors & Type";
+
+block head
+
+
+block main
+  main.page-main
+    h1.visually-hidden Цвета и шрифты для сайта
+    section.colors
+      h2.visually-hidden Цвета для сайта
+      div.colors__content-wrapper
+        ul.colors__list
+          +colors__item("Dark Shade 100%", "#1F2041")
+          +colors__item("Dark Shade 75%", "#1F2041")
+          +colors__item("Dark Shade 50%", "#1F2041")
+          +colors__item("Dark Shade 25%", "#1F2041")
+          +colors__item("Dark Shade 5%", "#1F2041")
+          +colors__item("Purple", "#BC9CFF")
+          +colors__item("Green", "#6FCF97")
+
+    section.fonts
+      h2.visually-hidden Шрифты для сайта
+      div.fonts__content-wrapper
+        ul.fonts__list
+          li.fonts__item
+            span.fonts__tagname H1 
+            p.fonts__text.fonts__text--other-font This one is the sub-section or widget title 
+          li.fonts__item
+            span.fonts__tagname H2 
+            p.fonts__text.fonts__text--other-font Next one is the item title inside widgets
+          li.fonts__item
+            span.fonts__tagname H3 
+            p.fonts__text This is a label or CTA text
+          li.fonts__item
+            span.fonts__tagname Body 
+            p.fonts__text This is the body text which is used for most of the design, like paragraphs, lists, etc.
+         
+          
+
+
+block script
+  script(src='assets/js/main.js')
+
+

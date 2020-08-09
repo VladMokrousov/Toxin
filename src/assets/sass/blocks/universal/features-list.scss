@@ -1,0 +1,53 @@
+.features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.features-list__item {
+  position: relative;
+  padding-left: 58px;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 280px;
+    height: 1px;
+    background-color: rgba(31, 32, 65, 0.1);
+  }
+}
+.features-list__item--smile {
+  margin-bottom: 38px;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url("/Toxin/dist/assets/img/smile.svg");
+    
+
+  }
+}
+.features-list__item--building::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 36px;
+  height: 38px;
+  background-image: url("/Toxin/dist/assets/img/building.svg");
+  
+}
+
+.features-list__text {
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 800;
+  color: rgba(31, 32, 65, 0.75);
+}
+.features-list__description {
+  font-weight: 400;
+}
