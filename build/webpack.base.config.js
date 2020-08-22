@@ -20,7 +20,8 @@ module.exports = {
   entry: { 
    // main: PATHS.src,  //Заменяет ./src/index.js Webpack сам понимает, что ему нужно взять
     main: `${PATHS.src}/index.js`,
-    forCalendar: `${PATHS.src}/forCalendar.js`
+    forCards: `${PATHS.src}/forCards.js`,
+    forLandingPage: `${PATHS.src}/forLandingPage.js`
   }, 
 
   output: {
@@ -149,6 +150,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: `${PATHS.src}/pug/pages/headers&footers.pug`,
       filename: './headers&footers.html',
+      inject: false //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PATHS.src}/pug/pages/landing-page.pug`,
+      filename: './landing-page.html',
       inject: false //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
     })
 

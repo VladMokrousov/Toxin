@@ -1,0 +1,55 @@
+extends ../layout/templateForSite
+
+block variables
+  - var title = "landingPage";
+
+block head
+  link(rel="stylesheet" href="assets/css/forLandingPage.css") 
+
+
+block main
+  main.page-main.page-main--langingPage
+    h1.visually-hidden Подбор номера
+    section.card.card--find-room.card--landing-page.content-wrapper--40
+        h2.visually-hidden Карточка подбора номера
+        form(name='find-room')
+          span.h2-title.left-side__title Найдем номера под ваши пожелания
+          .content-wrapper--flex.content-wrapper--20.left-side__wrapper--flex
+            .left-side__wrapper--date-dropdown
+              label.label.label--with-dropdown(for='arrival') Прибытие
+              input#arrival.input.input--short.input--bright-placeholder(type='text', name='arrival', placeholder='ДД.ММ.ГГГГ')
+            .left-side__wrapper--date-dropdown
+              label.label.label--with-dropdown(for='exit') Выезд
+              input#exit.input.input--short.input--bright-placeholder(type='text', name='exit', placeholder='ДД.ММ.ГГГГ')
+          .content-wrapper--30
+            label.label.label--with-dropdown.label--with-dropdown-with-clean-btn(for='how-much-guests') Гости
+            .content-wrapper--expanded-content
+              input#how-much-guests.input.input--long.input--bright-placeholder.input--expanded.input--expanded-with-clean-btn(type='text', name='how-much-guests', placeholder='Сколько гостей' readonly)
+              .expanded-part.expanded-part--long.expanded-part--with-clean-btn.expanded-part--hidden.expanded-part--working
+                .content-wrapper--flex
+                  ul.expanded-part__name-list
+                    li.expanded-part__name-item.expanded-part__name-item--with-clean-btn взрослые
+                    li.expanded-part__name-item.expanded-part__name-item--with-clean-btn дети
+                    li.expanded-part__name-item.expanded-part__name-item--with-clean-btn младенцы
+                  ul.expanded-part__number-list
+                    li.expanded-part__number-item
+                      button.expanded-part__control-btn.expanded-part__control-btn--decrease.expanded-part__control-btn--decrease-with-clean-btn
+                      span.expanded-part__number-text.expanded-part__number-text--with-clean-btn 2
+                      button.expanded-part__control-btn.expanded-part__control-btn--increase.expanded-part__control-btn--increase-with-clean-btn
+                    li.expanded-part__number-item
+                      button.expanded-part__control-btn.expanded-part__control-btn--decrease.expanded-part__control-btn--decrease-with-clean-btn
+                      span.expanded-part__number-text.expanded-part__number-text--with-clean-btn 1
+                      button.expanded-part__control-btn.expanded-part__control-btn--increase.expanded-part__control-btn--increase-with-clean-btn
+                    li.expanded-part__number-item 
+                      button.expanded-part__control-btn.expanded-part__control-btn--disabled.expanded-part__control-btn--decrease.expanded-part__control-btn--decrease-with-clean-btn
+                      span.expanded-part__number-text.expanded-part__number-text--with-clean-btn 0
+                      button.expanded-part__control-btn.expanded-part__control-btn--increase.expanded-part__control-btn--increase-with-clean-btn
+                .content-wrapper--flex-with-justify
+                  button.btn--string.btn--string-opacity.expanded-part__clean-btn.expanded-part__clean-btn--with-clean-btn очистить
+                  button.btn--string.expanded-part__apply-btn.expanded-part__apply-btn--with-clean-btn.expanded-part__apply-btn--another-margin применить
+          .content-wrapper--arrow-content
+            a.arrow--right.arrow--for-purchase(href="#")
+            a.btn.btn--with-arrow(href="#") Подобрать номер
+    span.marketing-text.regular-text Лучшие номера для вашей работы, отдыха и просто вдохновения
+block script
+  script(src='assets/js/forLandingPage.js')

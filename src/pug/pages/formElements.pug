@@ -8,7 +8,7 @@ block head
 
 
 block main
-  main.page-main.page-main--formElements
+  main.page-main.page-main--ui
     h1.visually-hidden Элементы форм для сайта
     .up-part
       .up-part__left
@@ -159,7 +159,8 @@ block main
           input#dropdown-default-second.input.input--medium.input--bright-placeholder.input--expanded.input--expanded-close(type='text', name='dropdown-default', placeholder='2 спальни, 2 кровати...' readonly)
         .content-wrapper--with-shadow
           label.label.label--with-status.label--with-status-expanded.label--with-expanded(for='dropdown-expanded') Dropdown
-          input#dropdown-expanded.input.input--medium.input--bright-placeholder.input--hover-focus.input--expanded.input--expanded--open(type='text', name='dropdown-expanded', placeholder='2 спальни, 2 кровати...' readonly)
+          input#dropdown-expanded.input.input--medium.input--bright-placeholder.input--hover-focus.input--expanded.input--expanded-open(type='text', name='dropdown-expanded', placeholder='2 спальни, 2 кровати...' readonly)
+          .content-wrapper--expanded-content
           .expanded-part
             ul.expanded-part__name-list
               li.expanded-part__name-item спальни
@@ -238,7 +239,7 @@ block main
       .middle-part__center
         .content-wrapper--with-shadow
           label.label.label--with-expanded(for='dropdown-expanded-guests') Dropdown
-          input#dropdown-expanded-guests.input.input--long.input--bright-placeholder.input--hover-focus.input--expanded.input--expanded--open(type='text', name='dropdown-expanded-guests', placeholder='Сколько гостей' readonly)
+          input#dropdown-expanded-guests.input.input--long.input--bright-placeholder.input--hover-focus.input--expanded.input--expanded-open(type='text', name='dropdown-expanded-guests', placeholder='Сколько гостей' readonly)
           .expanded-part.expanded-part--long
             .content-wrapper--flex
               ul.expanded-part__name-list
@@ -279,7 +280,7 @@ block main
       .middle-part__right   
         .content-wrapper--with-shadow
           label.label.label--with-expanded(for='dropdown-expanded-guests-plus') Dropdown
-          input#dropdown-expanded-guests-plus.input.input--long.input--bright-placeholder.input--hover-focus.input--expanded.input--expanded--open(type='text', name='dropdown-expanded-guests-plus', placeholder='3 гостя' readonly)
+          input#dropdown-expanded-guests-plus.input.input--long.input--bright-placeholder.input--hover-focus.input--expanded.input--expanded-open(type='text', name='dropdown-expanded-guests-plus', placeholder='3 гостя' readonly)
           .expanded-part.expanded-part--long
             .content-wrapper--flex
               ul.expanded-part__name-list

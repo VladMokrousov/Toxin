@@ -34,8 +34,21 @@
 .input--hover-focus{
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
+
+/*Переписать ui kit с новыми классами. Было:
 .input--expanded {
   border-radius: 4px 4px 0 0;
   padding-right: 40px;
   cursor: pointer;
+}
+Стало:     */
+
+.input--expanded {
+  
+  padding-right: 40px;
+  cursor: pointer;
+}
+.input--expanded-open {
+  border-radius: 4px 4px 0 0;
+  
 }

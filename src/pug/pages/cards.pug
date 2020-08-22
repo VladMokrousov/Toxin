@@ -4,10 +4,10 @@ block variables
   - var title = "Cards";
 
 block head
-  link(rel="stylesheet" href="assets/css/forCalendar.css") 
+  link(rel="stylesheet" href="assets/css/forCards.css") 
 
 block main
-  main.page-main.page-main--cards
+  main.page-main.page-main--cards.page-main--ui.page-main--flex
     h1.visually-hidden Карточки для сайта
     .left-side
       section.card.card--find-room.content-wrapper--40
@@ -23,7 +23,7 @@ block main
               input#exit.input.input--short.input--bright-placeholder(type='text', name='exit', placeholder='ДД.ММ.ГГГГ')
           .left-side__wrapper--how-much-guests
             label.label.label--with-dropdown(for='how-much-guests') Гости
-            input#how-much-guests.input.input--long.input--bright-placeholder(type='text', name='how-much-guests', placeholder='Сколько гостей')
+            input#how-much-guests.input.input--long.input--bright-placeholder(type='text', name='how-much-guests', placeholder='Сколько гостей' readonly)
           .content-wrapper--arrow-content
             a.arrow--right.arrow--for-purchase(href="#")
             a.btn.btn--with-arrow(href="#") Подобрать номер
@@ -185,4 +185,4 @@ block main
               b.card__description--reviews-strong 65 
               | Отзывов
 block script
-  script(src='assets/js/forCalendar.js')
+  script(src='assets/js/forCards.js')

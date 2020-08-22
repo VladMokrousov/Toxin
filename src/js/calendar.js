@@ -1,7 +1,7 @@
 "use strict";
 (function(){
 
-  console.log('Я родился!');
+ 
   const Russian = require("flatpickr/dist/l10n/ru.js").default.ru;
   const confirmDatePlugin = require("flatpickr/dist/plugins/confirmDate/confirmDate.js");
   const rangePlugin = require("flatpickr/dist/plugins/rangePlugin.js");
@@ -18,7 +18,7 @@
     "plugins": [new confirmDatePlugin({}), new rangePlugin({ input: "#exit--booking"})],
    
   });
-*/
+ */
   const fpInline = flatpickr("#invisible-input", {
     inline: true,
     dateFormat: "d.m.Y",

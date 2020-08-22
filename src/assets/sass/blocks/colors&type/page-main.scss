@@ -1,19 +1,26 @@
-.page-main {
+
+.page-main--flex {
   display: flex;
+}
+.page-main--ui {
   padding-top: 67px;
 }
-.page-main--formElements {
-  display: block;
-}
+
 .page-main--cards {
   margin-bottom: 140px;
 }
-.page-main--headersFooters {
-  padding-top: 0;
+.page-main--langingPage {
+  position: relative;
+  height: 830px;
+  background-image: url('/Toxin/dist/assets/img/background-for-langing.png');
+  background-size: cover;
+  background-position: 0 -50px;
+  background-repeat: no-repeat;
 }
 
+
 @media (max-width: $tablet-width) {
-  .page-main {
+  .page-main--flex {
     display: block;
   }
 
