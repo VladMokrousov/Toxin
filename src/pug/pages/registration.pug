@@ -1,0 +1,46 @@
+extends ../layout/templateForSite
+
+block variables
+  - var title = "registration";
+
+block head
+  link(rel="stylesheet" href="assets/css/forRegistration.css") 
+
+
+block main
+  main.page-main.page-main--registration
+    h1.visually-hidden Регистрация аккаунта
+    section.card.card--account-registration.card--registration-page
+        h2.visually-hidden Регистрация
+        form(name="sign-up")
+          span.h2-title.left-side__title Регистрация аккаунта
+          .content-wrapper--20
+            input.input.input--long.left-side__input(type='text', name='name', placeholder='Имя')
+            input.input.input--long.left-side__input(type='text', name='surname', placeholder='Фамилия')
+            ul.radio-list
+              li.radio-list__item
+                input.visually-hidden.radio-list__radio(type='radio' name='sex--cards' value='Мужчина' id='man-sex--cards' checked)
+                label.radio-list__label(for='man-sex--cards') Мужчина
+              li.radio-list__item
+                input.visually-hidden.radio-list__radio(type='radio' name='sex--cards' value='Женщина' id='woman-sex--cards')
+                label.radio-list__label(for='woman-sex--cards') Женщина
+          .content-wrapper--20
+            label.label(for='birthday') Дата рождения
+            input#birthday.input.input--long(type='text', name='birthday', placeholder='ДД.ММ.ГГГГ')
+          .content-wrapper--20
+            span.label Данные для входа в сервис
+            input.input.input--long.left-side__input(type='text', name='email', placeholder='Email')
+            input.input.input--long.left-side__input(type='text', name='password', placeholder='Пароль')
+            .toggle-item
+              label.toggle-item__label(for='agree--cards') Получать спецпредложения
+                input.visually-hidden.toggle-item__toggle(type='checkbox' name='agree--cards' id='agree--cards')
+                span.toggle-item__slider
+          .content-wrapper--arrow-content.content-wrapper--30
+            a.arrow--right.arrow--for-purchase(href="#")
+            a.btn.btn--with-arrow(href="#") Перейти к оплате
+        .content-wrapper--flex-with-justify
+          span.card__text--another-action Уже есть аккаунт на Toxin  
+          button.btn.btn--invert Войти
+ 
+block script
+  script(src='assets/js/forRegistration.js')

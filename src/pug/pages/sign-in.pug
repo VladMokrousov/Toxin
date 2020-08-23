@@ -1,0 +1,28 @@
+extends ../layout/templateForSite
+
+block variables
+  - var title = "sign-in";
+
+block head
+  link(rel="stylesheet" href="assets/css/forSignIn.css") 
+
+
+block main
+  main.page-main.page-main--sign-in
+    h1.visually-hidden Вход в аккаунт
+    section.card.card--entry
+      h2.visually-hidden Вход на сайт
+      form(name="sign-in")
+        span.h2-title.center__title Войти
+        .content-wrapper--20
+          input.input.input--long.left-side__input(type='text', name='email--entry', placeholder='Email')
+          input.input.input--long.left-side__input(type='text', name='password--entry', placeholder='Пароль')
+        .content-wrapper--arrow-content.content-wrapper--30
+          a.arrow--right.arrow--for-purchase(href="#")
+          a.btn.btn--with-arrow(href="#") Войти
+      .content-wrapper--flex-with-justify
+        span.card__text--another-action Нет аккаунта на Toxin?
+        button.btn.btn--invert Создать
+ 
+block script
+  script(src='assets/js/forSignIn.js')

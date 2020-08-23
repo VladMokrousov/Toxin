@@ -21,7 +21,9 @@ module.exports = {
    // main: PATHS.src,  //Заменяет ./src/index.js Webpack сам понимает, что ему нужно взять
     main: `${PATHS.src}/index.js`,
     forCards: `${PATHS.src}/forCards.js`,
-    forLandingPage: `${PATHS.src}/forLandingPage.js`
+    forLandingPage: `${PATHS.src}/forLandingPage.js`,
+    forRegistration: `${PATHS.src}/forRegistration.js`,
+    forSignIn: `${PATHS.src}/forSignIn.js`
   }, 
 
   output: {
@@ -155,6 +157,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: `${PATHS.src}/pug/pages/landing-page.pug`,
       filename: './landing-page.html',
+      inject: false //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PATHS.src}/pug/pages/registration.pug`,
+      filename: './registration.html',
+      inject: false //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PATHS.src}/pug/pages/sign-in.pug`,
+      filename: './sign-in.html',
       inject: false //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
     })
 
