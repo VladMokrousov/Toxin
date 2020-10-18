@@ -1,0 +1,65 @@
+.page-main--flex {
+  display: flex;
+}
+
+.page-main--ui {
+  padding-top: 67px;
+}
+
+.page-main--cards {
+  margin-bottom: 140px;
+}
+
+.page-main--langingPage {
+  width: 1440px;
+  margin: 0 auto;
+  height: 830px;
+  box-sizing: border-box;
+  padding-top: 70px;
+  background-image: url('/Toxin/dist/assets/img/background-for-langing.jpg');
+  // background-image: url('/assets/img/background-for-langing.jpg');
+  background-size: cover;
+  background-position: 0 -70px;
+  background-repeat: no-repeat;
+}
+
+.page-main--registration {
+  width: 1440px;
+  height: 683px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-image: url('/Toxin/dist/assets/img/background-for-registration.jpg');
+  // background-image: url('/assets/img/background-for-registration.jpg');
+  background-size: cover;
+  background-position: 0 -70px;
+  background-repeat: no-repeat;
+}
+
+.page-main--sign-in {
+  width: 1440px;
+  height: 702px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/Toxin/dist/assets/img/background-for-registration.jpg');
+  // background-image: url('/assets/img/background-for-registration.jpg');
+  background-size: cover;
+  background-position: 0 -70px;
+  background-repeat: no-repeat;
+}
+
+.page-main--with-line {
+  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+
+@media (max-width: $tablet-width) {
+  .page-main--flex {
+    display: block;
+  }
+
+}

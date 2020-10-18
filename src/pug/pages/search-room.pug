@@ -1,0 +1,153 @@
+extends ../layout/templateForSite
+
+block variables
+  - var title = "searchRoom";
+
+block head
+  
+
+
+block main
+  main.page-main.page-main--with-line
+    h1.visually-hidden Выбор номера
+    .content-wrapper--search-room.container
+      section.room-filter
+        h2.visually-hidden Фильтр для номера
+        .content-wrapper--20
+          label.label.label--with-dropdown(for='filter-date-dropdown') Даты пребывания в отеле
+          input#filter-date-dropdown.input.input--medium.input--bright-placeholder.input--expanded(type='text', name='filter-date-dropdown', placeholder='19 авг - 23 авг' readonly) 
+        .content-wrapper--30
+            label.label.label--with-dropdown.label--with-dropdown-with-clean-btn(for='how-much-guests') Гости
+            .content-wrapper--expanded-content
+              input#how-much-guests.input.input--medium.input--bright-placeholder.input--expanded.input--expanded-with-clean-btn(type='text', name='how-much-guests', placeholder='3 гостя, 1 младенец' readonly)
+              .expanded-part.expanded-part--long.expanded-part--with-clean-btn.expanded-part--hidden.expanded-part--working
+                .content-wrapper--flex
+                  ul.expanded-part__name-list
+                    li.expanded-part__name-item.expanded-part__name-item--with-clean-btn взрослые
+                    li.expanded-part__name-item.expanded-part__name-item--with-clean-btn дети
+                    li.expanded-part__name-item.expanded-part__name-item--with-clean-btn младенцы
+                  ul.expanded-part__number-list
+                    li.expanded-part__number-item
+                      button.expanded-part__control-btn.expanded-part__control-btn--decrease.expanded-part__control-btn--decrease-with-clean-btn
+                      span.expanded-part__number-text.expanded-part__number-text--with-clean-btn 2
+                      button.expanded-part__control-btn.expanded-part__control-btn--increase.expanded-part__control-btn--increase-with-clean-btn
+                    li.expanded-part__number-item
+                      button.expanded-part__control-btn.expanded-part__control-btn--decrease.expanded-part__control-btn--decrease-with-clean-btn
+                      span.expanded-part__number-text.expanded-part__number-text--with-clean-btn 0
+                      button.expanded-part__control-btn.expanded-part__control-btn--increase.expanded-part__control-btn--increase-with-clean-btn
+                    li.expanded-part__number-item 
+                      button.expanded-part__control-btn.expanded-part__control-btn--disabled.expanded-part__control-btn--decrease.expanded-part__control-btn--decrease-with-clean-btn
+                      span.expanded-part__number-text.expanded-part__number-text--with-clean-btn 1
+                      button.expanded-part__control-btn.expanded-part__control-btn--increase.expanded-part__control-btn--increase-with-clean-btn
+                .content-wrapper--flex-with-justify
+                  button.btn--string.btn--string-opacity.expanded-part__clean-btn.expanded-part__clean-btn--with-clean-btn очистить
+                  button.btn--string.expanded-part__apply-btn.expanded-part__apply-btn--with-clean-btn.expanded-part__apply-btn--another-margin применить
+        .content-wrapper--30
+          span.label.label--range-slider Диапазон цены
+          .slider-with-range
+            input.slider-with-range__value(type="text" name="slider-value" placeholder="5 000₽ - 10 000₽" readonly)
+            .slider-with-range__line.slider-line
+              .slider-with-range__pin.slider-with-range__pin--min-value(tabindex="0") Кнопка изменения минимальной суммы    
+              .slider-with-range__pin.slider-with-range__pin--max-value(tabindex="0") Кнопка изменения максимальной суммы
+              .slider-with-range__range Диапазон сумм 
+          span.slider-with-range__description Стоимость за сутки пребывания в номере
+        .content-wrapper--30
+          span.label.up-part__label--more-margin checkbox buttons
+          ul.checkbox-list.up-part__checkbox-list
+            li.checkbox-list__item.up-part__checkbox-item
+              input.visually-hidden.checkbox-list__checkbox.up-part__checkbox(type='checkbox' name='can-smoke' id='can-smoke')
+              label.checkbox-list__label.up-part__checkbox-label(for='can-smoke') Можно курить
+            li.checkbox-list__item.up-part__checkbox-item
+              input.visually-hidden.checkbox-list__checkbox.up-part__checkbox(type='checkbox' name='pets-free' id='pets-free' checked)
+              label.checkbox-list__label.up-part__checkbox-label(for='pets-free') Можно с питомцами
+            li.checkbox-list__item.up-part__checkbox-item
+              input.visually-hidden.checkbox-list__checkbox.up-part__checkbox(type='checkbox' name='guests-free' id='guests-free' checked)
+              label.checkbox-list__label.up-part__checkbox-label(for='guests-free')
+                | Можно пригласить гостей
+                br
+                | (до 10 человек)
+        .content-wrapper--30
+          span.label.middle-part__label--more-margin Доступность
+          ul.checkbox-list
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='wide-corridor' id='wide-corridor')
+              label.checkbox-list__label.checkbox-list__label--rich(for='wide-corridor') Широкий коридор 
+              span.checkbox-list__description
+                | Ширина коридора в номере
+                br
+                | не менее 91 см.
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='helper-for-invalid' id='helper-for-invalid')
+              label.checkbox-list__label.checkbox-list__label--rich(for='helper-for-invalid') Помощник для инвалидов
+              span.checkbox-list__description
+                | На 1 этаже вас встретит специалист
+                br
+                | и проводит до номера.
+        .content-wrapper--30
+          label.label.label--with-expanded.label--room-fasilities(for='room-fasilities') Удобства номера
+          .content-wrapper--expanded-content
+            input#room-fasilities.input.input--medium.input--bright-placeholder.input--right-angles.input--expanded.input--room-fasilities(type='text', name='dropdown-default', placeholder='2 спальни, 2 кровати...' readonly)
+            .expanded-part.expanded-part--hidden.expanded-part--working.expanded-part--room-fasilities
+              ul.expanded-part__name-list
+                li.expanded-part__name-item.expanded-part__name-item--room-fasilities спальни
+                li.expanded-part__name-item.expanded-part__name-item--room-fasilities кровати
+                li.expanded-part__name-item.expanded-part__name-item--room-fasilities ванные комнаты
+              ul.expanded-part__number-list
+                li.expanded-part__number-item
+                  button.expanded-part__control-btn.expanded-part__control-btn--decrease.expanded-part__control-btn--decrease--room-fasilities
+                  span.expanded-part__number-text.expanded-part__number-text--room-fasilities 2
+                  button.expanded-part__control-btn.expanded-part__control-btn--increase.expanded-part__control-btn--increase--room-fasilities
+                li.expanded-part__number-item
+                  button.expanded-part__control-btn.expanded-part__control-btn--decrease.expanded-part__control-btn--decrease--room-fasilities
+                  span.expanded-part__number-text.expanded-part__number-text--room-fasilities 2
+                  button.expanded-part__control-btn.expanded-part__control-btn--increase.expanded-part__control-btn--increase--room-fasilities
+                li.expanded-part__number-item 
+                  button.expanded-part__control-btn.expanded-part__control-btn--decrease.expanded-part__control-btn--decrease--room-fasilities.expanded-part__control-btn--disabled
+                  span.expanded-part__number-text.expanded-part__number-text--room-fasilities 0
+                  button.expanded-part__control-btn.expanded-part__control-btn--increase.expanded-part__control-btn--increase--room-fasilities
+
+        .content-wrapper--0
+          span.label.label--expandable-checkbox-list.label--expandable-checkbox-list-close.middle-part__label--more-margin Дополнительные удобства
+          ul.checkbox-list.checkbox-list--expandable.checkbox-list--close
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='breakfast-f' id='breakfast-f')
+              label.checkbox-list__label(for='breakfast-f') Завтрак
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='desk-f' id='desk-f' checked)
+              label.checkbox-list__label(for='desk-f') Письменный стол
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='feeding-chair-f' id='feeding-chair-f' checked)
+              label.checkbox-list__label(for='feeding-chair-f') Стул для кормления
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='cot-f' id='cot-f' checked)
+              label.checkbox-list__label(for='cot-f') Кроватка
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='tv-f' id='tv-f')
+              label.checkbox-list__label(for='tv-f') Телевизор
+            li.checkbox-list__item
+              input.visually-hidden.checkbox-list__checkbox(type='checkbox' name='shampoo-f' id='shampoo-f')
+              label.checkbox-list__label(for='shampoo-f') Шампунь
+           
+      section.found-rooms
+        h2.visually-hidden Отфильтрованные номера
+        span.h2-title.title-with-margin Номера, которые мы для вас подобрали
+        .card-wrapper.content-wrapper--40
+        .pagination.search-room__pagination
+          ul.pagination__list
+            li.pagination__item
+              a.pagination__link.pagination__link--active(href='#') 1
+            li.pagination__item      
+              a.pagination__link(href='#') 2
+            li.pagination__item           
+              a.pagination__link(href='#') 3
+            li.pagination__item         
+              a.pagination__link(href='#') ...
+            li.pagination__item         
+              a.pagination__link(href='#') 15
+            li.pagination__item.pagination__item--next
+              a.arrow--right.arrow--for-purchase.pagination__arrow(href='#')         
+              a.pagination__link--with-arrow(href='#')
+          span.pagination__description 1 – 12 из 100+ вариантов аренды  
+    
+block script
+  script(src='assets/js/forSearchRoom.js')

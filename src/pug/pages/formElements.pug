@@ -20,20 +20,20 @@ block main
           input#text-field-hover-focus.input.input--long.input--bright-placeholder.input--hover-focus(type='text', name='hover', placeholder='This is pretty awesome')
         .content-wrapper--20
           label.label.label--with-status.label--with-dropdown.up-part__label(for='dropdown-default') Dropdown
-          input#dropdown-default.input.input--long.input--bright-placeholder(type='text', name='dropdown-default', placeholder='Сколько гостей')
+          input#dropdown-default.input.input--long.input--bright-placeholder.input--expanded(type='text', name='dropdown-default', placeholder='Сколько гостей' readonly)
         .content-wrapper--40
           label.label.label--with-status.up-part__label(for='masked-text-field') Masked text field
           input#masked-text-field.input.input--long(type='text', name='masked-text-field', placeholder='ДД.ММ.ГГ')
         .content-wrapper--40.content-wrapper--flex.up-part__content-wrapper--date-dropdown
           .up-part__date-dropdown-wrapper.up-part__date-dropdown-wrapper--left
             label.label.label--with-dropdown.up-part__label(for='date-dropdown') date dropdown
-            input#date-dropdown.input.input--short.input--bright-placeholder(type='text', name='date-dropdown', placeholder='ДД.ММ.ГГГГ')
+            input#date-dropdown.input.input--short.input--bright-placeholder.input--expanded(type='text', name='date-dropdown', placeholder='ДД.ММ.ГГГГ' readonly)
           .up-part__date-dropdown-wrapper.up-part__date-dropdown-wrapper--right
             label.label.label--with-dropdown.up-part__label(for='date-dropdown-sec') date dropdown
-            input#date-dropdown-sec.input.input--short.input--bright-placeholder(type='text', name='date-dropdown-sec', placeholder='19.08.19')
+            input#date-dropdown-sec.input.input--short.input--bright-placeholder.input--expanded(type='text', name='date-dropdown-sec', placeholder='19.08.19' readonly)
         .content-wrapper--40
           label.label.label--with-dropdown.up-part__label.up-part__label--filter-date-dropdown(for='filter-date-dropdown') Filter date dropdown
-          input#filter-date-dropdown.input.input--medium.input--bright-placeholder(type='text', name='filter-date-dropdown', placeholder='19 авг - 23 авг') 
+          input#filter-date-dropdown.input.input--medium.input--bright-placeholder.input--expanded(type='text', name='filter-date-dropdown', placeholder='19 авг - 23 авг' readonly) 
         .content-wrapper--arrow-content
           label.label.up-part__label(for='subscription-text-field') Subscription text field
           input#subscription-text-field.input.input--medium(type='text', name='subscription-text-field', placeholder='Email')   
@@ -156,7 +156,7 @@ block main
       .middle-part__left
         .content-wrapper--20
           label.label.label--with-status.label--with-expanded(for='dropdown-default-second') Dropdown
-          input#dropdown-default-second.input.input--medium.input--bright-placeholder.input--expanded.input--expanded-close(type='text', name='dropdown-default', placeholder='2 спальни, 2 кровати...' readonly)
+          input#dropdown-default-second.input.input--medium.input--bright-placeholder.input--right-angles.input--expanded.input--expanded-close(type='text', name='dropdown-default', placeholder='2 спальни, 2 кровати...' readonly)
         .content-wrapper--with-shadow
           label.label.label--with-status.label--with-status-expanded.label--with-expanded(for='dropdown-expanded') Dropdown
           input#dropdown-expanded.input.input--medium.input--bright-placeholder.input--hover-focus.input--expanded.input--expanded-open(type='text', name='dropdown-expanded', placeholder='2 спальни, 2 кровати...' readonly)
@@ -327,7 +327,7 @@ block main
       .bottom-part__right
         .feedback
           .feedback__up
-            img(src="assets/img/avatar.png" width="48" height="48" alt="Аватар комментатора")
+            img(src="assets/img/avatar.jpg" width="48" height="48" alt="Аватар комментатора")
             .wrapper
               span.feedback__commentator Мурад Сарафанов
               span.feedback__date 5 дней назад
@@ -338,6 +338,6 @@ block main
               br
               | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.   
 block script
-  script(src='assets/js/main.js')
+  script(src='assets/js/forFormElements.js')
 
 

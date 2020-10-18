@@ -1,12 +1,16 @@
 .rate-buttons {
   width: 125px;
 }
+
 .rate-buttons--first {
   margin-right: 20px;
 }
-.rate-buttons__input:checked ~ .rate-buttons__rate {
+
+.rate-buttons__input:checked~.rate-buttons__rate {
   background-image: url("/Toxin/dist/assets/img/star-active.svg");
+  // background-image: url("/assets/img/star-active.svg");
 }
+
 .rate-buttons__rate {
   cursor: pointer;
   width: 20px;
@@ -14,10 +18,12 @@
   padding-right: 5px;
   float: right;
   background-image: url("/Toxin/dist/assets/img/star-disable.svg");
+  // background-image: url("/assets/img/star-disable.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
   transition: all 0.2s;
-  &:hover{
+
+  &:hover {
     transform: rotate(-15deg) scale(1.3);
   }
 }

@@ -1,4 +1,4 @@
-extends ../layout/grayTemplateForUi
+extends ../layout/grayTemplateForUiNoCss
 
 block variables
   - var title = "Cards";
@@ -112,10 +112,10 @@ block main
       section.card--calendar.content-wrapper--40
         h2.visually-hidden Выбор даты
         input#invisible-input.card__calendar-input(type='text', name='invisible-input', placeholder='sometext')
-      section.card--room.card--room-with-arrow.content-wrapper--40
+      section.card--room.content-wrapper--40
         h2.visually-hidden Карточка номера
         .card__wrapper--img
-          img.card__img(src="assets/img/room-1.png" width="270" height="151" alt="Карточка номера")
+          img.card__img(src="assets/img/room-1.jpg" width="270" height="151" alt="Карточка номера")
           .card__shadow-for-img.card__shadow-for-img--left
           .card__shadow-for-img.card__shadow-for-img--right
           .card__arrow-for-slider.card__arrow-for-slider--prev
@@ -153,8 +153,8 @@ block main
               | Отзывов
       section.card--room
         h2.visually-hidden Карточка номера
-        .card__wrapper--img-no-arrow
-          img.card__img(src="assets/img/room-2.png" width="270" height="151" alt="Карточка номера")
+        .card__wrapper--img
+          img.card__img(src="assets/img/room-2.jpg" width="270" height="151" alt="Карточка номера")
           .card__wrapper--slider-dots
             span.card__slider-dot.card__slider-dot--active
             span.card__slider-dot
@@ -169,18 +169,18 @@ block main
               b.card__title--price-per-day-strong 9 900₽ 
               | в сутки 
           .card__wrapper--rate.content-wrapper--flex-with-justify
-            .card__rate-buttons
-                form(action="")
-                  input.visually-hidden.rate-buttons__input.rate-buttons__input--5(type="radio" id="another-star-5" name="another-star")
-                  label.rate-buttons__rate.rate-buttons__rate--5(for="another-star-5")
-                  input.visually-hidden.rate-buttons__input.rate-buttons__input--4(type="radio" id="another-star-4" name="another-star" checked)
-                  label.rate-buttons__rate.rate-buttons__rate--4(for="another-star-4")
-                  input.visually-hidden.rate-buttons__input.rate-buttons__input--3(type="radio" id="another-star-3" name="another-star")
-                  label.rate-buttons__rate.rate-buttons__rate--3(for="another-star-3")
-                  input.visually-hidden.rate-buttons__input.rate-buttons__input--2(type="radio" id="another-star-2" name="another-star")
-                  label.rate-buttons__rate.rate-buttons__rate--2(for="another-star-2")
-                  input.visually-hidden.rate-buttons__input.rate-buttons__input--1(type="radio" id="another-star-1" name="another-star")
-                  label.rate-buttons__rate.rate-buttons__rate--1(for="another-star-1")
+            .rate-buttons
+              form(action="")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--5(type="radio" id="another-star-5" name="another-star")
+                label.rate-buttons__rate.rate-buttons__rate--5(for="another-star-5")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--4(type="radio" id="another-star-4" name="another-star" checked)
+                label.rate-buttons__rate.rate-buttons__rate--4(for="another-star-4")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--3(type="radio" id="another-star-3" name="another-star")
+                label.rate-buttons__rate.rate-buttons__rate--3(for="another-star-3")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--2(type="radio" id="another-star-2" name="another-star")
+                label.rate-buttons__rate.rate-buttons__rate--2(for="another-star-2")
+                input.visually-hidden.rate-buttons__input.rate-buttons__input--1(type="radio" id="another-star-1" name="another-star")
+                label.rate-buttons__rate.rate-buttons__rate--1(for="another-star-1")
             span.card__description--reviews
               b.card__description--reviews-strong 65 
               | Отзывов

@@ -1,20 +1,23 @@
-.like-button{
+.like-button {
   width: 40px;
   height: 20px;
   padding: 0;
   padding-left: 10px;
   position: relative;
- 
+
   font-size: 10px;
   line-height: 12px;
   color: rgba(31, 32, 65, 0.25);
-  
+
   border: 1px solid rgba(31, 32, 65, 0.25);
+ 
   border-radius: 10px;
   box-sizing: border-box;
   background-color: transparent;
+
   cursor: pointer;
-  &::before{
+
+  &::before {
     content: "";
     position: absolute;
     top: 6px;
@@ -22,18 +25,29 @@
     width: 10px;
     height: 8px;
     background-image: url("/Toxin/dist/assets/img/heart-disable.svg");
+    //background-image: url("/assets/img/heart-disable.svg");
     position: 0 0;
   }
+
+
 }
-.like-button:focus{
+
+
+
+.like-button:focus {
   outline: none;
 }
-.like-button--clicked{
+
+.like-button--clicked {
   color: #BC9CFF;
   border: 1px solid #BC9CFF;
-  &::before{
+
+  &::before {
     background-image: url("/Toxin/dist/assets/img/heart-active.svg");
+    //background-image: url("/assets/img/heart-active.svg");
   }
+ 
+ 
 }
 
 .like-button--first {

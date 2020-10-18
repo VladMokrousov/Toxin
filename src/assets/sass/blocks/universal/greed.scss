@@ -1,0 +1,36 @@
+.room-info {
+  grid-area: info;
+}
+
+.room-impressions {
+  grid-area: impressions;
+}
+
+.room-review {
+  grid-area: review;
+}
+
+.room-rules {
+  grid-area: rules;
+}
+
+.room-cancel {
+  grid-area: cancel;
+}
+
+.room-card {
+  grid-area: card;
+}
+
+.greed--room-details {
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: 361px 419px 380px;
+  grid-row-gap: 30px;
+
+  grid-template-areas:
+    "info impressions card"
+    "review review card"
+    "rules cancel card";
+
+}

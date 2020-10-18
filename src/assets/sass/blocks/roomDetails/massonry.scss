@@ -1,0 +1,23 @@
+.massonry__photo--1 {
+  grid-area: bigPic;
+}
+
+.massonry__photo--2 {
+  grid-area: smallPic-1;
+}
+
+.massonry__photo--3 {
+  grid-area: smallPic-2;
+}
+
+.massonry {
+  width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: 981px 459px;
+  grid-template-areas:
+    "bigPic smallPic-1"
+    "bigPic smallPic-2";
+
+}

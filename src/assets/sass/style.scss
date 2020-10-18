@@ -23,9 +23,13 @@
 @import "./blocks/universal/calendar.scss";
 @import "./blocks/universal/card.scss";
 @import "./blocks/universal/h2-title.scss";
-@import "./blocks/colors&type/page-header.scss";
-@import "./blocks/colors&type/main-nav.scss";
-@import "./blocks/colors&type/page-main.scss";
+@import "./blocks/universal/h3-title.scss";
+@import "./blocks/universal/title-with-margin.scss";
+@import "./blocks/universal/greed.scss";
+@import "./blocks/universal/page-main.scss";
+@import "./blocks/universal/main-nav.scss";
+@import "./blocks/universal/page-header.scss";
+
 @import "./blocks/colors&type/colors.scss";
 @import "./blocks/colors&type/fonts.scss";
 @import "./blocks/formElements/up-part.scss";
@@ -35,3 +39,12 @@
 @import "./blocks/cards/center.scss";
 @import "./blocks/cards/right-side.scss";
 @import "./blocks/landingPage/marketing-text.scss";
+@import "./blocks/searchRoom/room-filter.scss";
+@import "./blocks/searchRoom/found-rooms.scss";
+@import "./blocks/searchRoom/card-wrapper.scss";
+@import "./blocks/searchRoom/search-room__pagination.scss";
+@import "./blocks/roomDetails/massonry.scss";
+@import "./blocks/roomDetails/room-rules.scss";
+@import "./blocks/roomDetails/room-cancel.scss";
+@import "./blocks/roomDetails/room-card.scss";
+@import "./blocks/roomDetails/room-review.scss";
